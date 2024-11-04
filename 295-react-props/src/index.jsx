@@ -3,25 +3,38 @@ import ReactDOM from "react-dom";
 
 
 
-function Card(){
+function Card(props){
   return <div>
  <h1>My Contacts</h1>
 
-<h2>Beyonce</h2>
+<h2>{props.name}</h2>
 <img
-  src="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-  alt="avatar_img"
-/>
-<p>+123 456 789</p>
-<p>b@beyonce.com</p>
+  src={props.img}/>
+<p>{props.phno}</p>
+<p>{props.email}</p>
 
   </div>
 }
 
 ReactDOM.render(
   <div>
-   <h1>My contacts</h1>
- 
+   <Card  name = "Beyonce"
+   img = "https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
+  alt="avatar_img"
+  phno = "+123 456 789"
+  email = "b@beyonce.com"
+   
+   />
+
+   <Card 
+   
+   name ="Sonia"
+   img = "https://images.pexels.com/photos/19640832/pexels-photo-19640832/free-photo-of-untitled.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+   phno = "+123 456 789"
+   email = "b@beyonce.com"
+
+   
+   />
   </div>,
   document.getElementById("root")
 );
