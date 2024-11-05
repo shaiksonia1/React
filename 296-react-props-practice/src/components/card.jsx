@@ -4,6 +4,7 @@ import React from "react";
 function card (props){
     return <div className="card">
     <div className="top">
+      <p>{Key.id}</p>
       <h2 className="name">{props.name}</h2>
       <img className="circle-img"
         src={props.img}
