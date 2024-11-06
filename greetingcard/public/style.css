@@ -1,0 +1,61 @@
+/* Reset and background */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F4D9D0;
+  }
+  
+  /* Container styling for horizontal layout */
+  .App {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  /* Card styling */
+  .Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 1rem;
+    background-color: #C75B7A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 90%; /* Default to full width */
+    max-width: 200px; /* Restricts card width */
+    height: auto;
+  }
+  
+  /* Image styling inside Card */
+  .image1 {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Paragraph styling inside Card */
+  .para {
+    background-color: transparent;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  /* Responsive grid layout */
+  @media (min-width: 600px) {
+    .Card {
+      flex: 1 1 calc(50% - 2rem); /* Two cards per row on medium screens */
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .Card {
+      flex: 1 1 calc(33.33% - 2rem); /* Three cards per row on larger screens */
+    }
+  }
+  
